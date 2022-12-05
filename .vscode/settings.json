@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    ".env": "ini",
+    ".postcssrc": "jsonc",
+    "*.svx": "mdx",
+    "*.css": "css",
+    "*.meta": "yaml",
+    "string.h": "c"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "run",
+      "dependsOn": ["cppbuild"],
+      // "command": "cat ./input.txt | ./app.exe",
+      "command": "./app.exe",
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Run the programe with the input.",
+      "problemMatcher": []
+    },
+    {
+      "type": "cppbuild",
+      "label": "cppbuild",
+      "command": "C:\\MinGW\\bin\\gcc.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-Wall",
+        "-g",
+        "${file}",
+        "-o",
+        "app.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Tâche générée par le débogueur."
+    },
+    {
+      "type": "cppbuild",
+      "label": "debugger",
+      "command": "C:/MinGW/bin/gcc.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "C:/MinGW/bin"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Voila le debugger"
+    }
+  ],
+  "version": "2.0.0"
+}
